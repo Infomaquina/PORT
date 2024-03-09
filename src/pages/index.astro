@@ -1,12 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const last_posts = posts.slice(0, 3);
 const props = Astro.props
 ---
 
@@ -16,7 +11,7 @@ const props = Astro.props
 
     </div>
     <div class="text-5xl font-bold">Sou Anderson Brandão</div>
-    <div class="text-3xl py-3 font-bold">FullStack Developer</div>
+    <div class="text-3xl py-3 font-bold">Desenvolvedor Pleno</div>
     <div class="py-2">
       <text class="text-lg">
          <p class="indent-10">
@@ -33,36 +28,10 @@ const props = Astro.props
          </p>
 
       </text>
-    </div>
-    <div class="mt-8">
-      <a class="btn" href="https://wa.me/5511943646208" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
-	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-		<path stroke-dasharray="64" stroke-dashoffset="64" d="M8 3C8.5 3 10.5 7.5 10.5 8C10.5 9 9 10 8.5 11C8 12 9 13 10 14C10.3943 14.3943 12 16 13 15.5C14 15 15 13.5 16 13.5C16.5 13.5 21 15.5 21 16C21 18 19.5 19.5 18 20C16.5 20.5 15.5 20.5 13.5 20C11.5 19.5 10 19 7.5 16.5C5 14 4.5 12.5 4 10.5C3.5 8.5 3.5 7.5 4 6C4.5 4.5 6 3 8 3Z">
-			<animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />
-			<animateTransform attributeName="transform" begin="0.6s;lineMdPhoneCallLoop0.begin+2.6s" dur="0.5s" type="rotate" values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
-		</path>
-		<path stroke-dasharray="4" stroke-dashoffset="4" d="M14 7.04404C14.6608 7.34734 15.2571 7.76718 15.7624 8.27723M16.956 10C16.6606 9.35636 16.2546 8.77401 15.7624 8.27723" opacity="0">
-			<set id="lineMdPhoneCallLoop0" attributeName="opacity" begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" to="1" />
-			<animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" dur="0.2s" values="4;8" />
-			<animate fill="freeze" attributeName="stroke-dashoffset" begin="1.3s;lineMdPhoneCallLoop0.begin+3.3s" dur="0.3s" values="0;4" />
-			<set attributeName="opacity" begin="1.6s;lineMdPhoneCallLoop0.begin+3.6s" to="0" />
-		</path>
-		<path stroke-dasharray="10" stroke-dashoffset="10" d="M20.748 9C20.3874 7.59926 19.6571 6.347 18.6672 5.3535M15 3.25203C16.4105 3.61507 17.6704 4.3531 18.6672 5.3535" opacity="0">
-			<set attributeName="opacity" begin="1s;lineMdPhoneCallLoop0.begin+3s" to="1" />
-			<animate fill="freeze" attributeName="stroke-dashoffset" begin="1s;lineMdPhoneCallLoop0.begin+3s" dur="0.2s" values="10;20" />
-			<animate fill="freeze" attributeName="stroke-dashoffset" begin="1.5s;lineMdPhoneCallLoop0.begin+3.5s" dur="0.3s" values="0;10" />
-			<set attributeName="opacity" begin="1.8s;lineMdPhoneCallLoop0.begin+3.8s" to="0" />
-		</path>
-	</g>
-</svg>
-      
-       Contato</a>
-    </div>
-  </div>
+    </div></div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Projetos recentes</div>
   </div>
 
   <HorizontalCard
@@ -88,4 +57,43 @@ const props = Astro.props
     url="#"
     badge="Saas"
   />
+<br>
+<br>
+<div class="text-3xl w-full font-bold my-5">Empresas Atendidas</div>
+  <div class="flex flex-wrap justify-between">
+
+      <!-- CONTROL PLUS -->
+      <div class="mt-5 px-2">
+         <a href="https://controlplus.ind.br/" target="_blank">
+            <img src="https://controlplus.ind.br/wp-content/uploads/2023/10/logo_controlplus-1-280x63.png" alt="CONTROLPLUS" width="200px">
+         </a>
+      </div>
+
+    <!-- SALDAO -->
+    <div class="pt-5 px-2">
+      <a href="https://www.instagram.com/saldaomogi/" target="_blank">
+         <img src="https://sistema.saldaomogi.com/IMG/PWA/128.png" alt="SALDAOMOGI" width="50px">
+      </a>
+    </div>
+
+    <!-- SERROS -->
+    <a href="https://serros.com.br/" target="_blank" class="mt-5 px-2">
+      <img src="https://serros.com.br/wp-content/uploads/2021/06/cropped-Logo-Serros.png" alt="SERROS" width="200px">
+    </a>
+
+    <!-- CENTERCELL -->
+    <a href="http://centercell.com.br/" target="_blank" class="mt-5 px-2">
+      <img src="http://centercell.com.br/img/logo-medio.png" alt="FACILITY"  width="100px">
+    </a>
+
+    <!-- SMART -->
+    <a href="https://www.facebook.com/comercial.smart/" target="_blank" class="mt-5 px-2">
+      <img src="https://scontent.fcgh10-1.fna.fbcdn.net/v/t39.30808-1/336365124_5862031550585352_8729442622792524505_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGPLYnScz32218BNON4hzuD5KBrCPxq0pDkoGsI_GrSkE_uS7xwN7uPs7ToR_kr1jWxbRsD2k8syuF4Pq8ZEzZb&_nc_ohc=ufLy7k5u1gcAX-VD6Gh&_nc_ht=scontent.fcgh10-1.fna&oh=00_AfDvXcw-nmA9sA0UEy2ADXY6CPZr0u_8Bd57RvCh1BDitA&oe=65EF8F55" alt="FACILITY"  width="50px">
+    </a>
+
+    <!-- SANTA LOLLA -->
+    <a href="https://www.santalolla.com.br/" target="_blank" class="mt-5 px-2">
+      <img src="https://santalolla.vtexassets.com/assets/vtex.file-manager-graphql/images/59d833e9-39a0-471f-a2c1-c1dd82779c79___16a357575a813dc10177ccb77de9ce90.png" alt="FACILITY"  width="100px">
+    </a>
+  </div>
 </BaseLayout>

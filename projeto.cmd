@@ -1,4 +1,3 @@
-start http://localhost/phpmyadmin/
-start https://localhost:3000
+start http://localhost:4321
 start PORT.code-workspace
 start cmd /k "npm run dev"
